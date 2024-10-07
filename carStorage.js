@@ -13,7 +13,7 @@ module.exports = class CarStorage {
     if (!searchValue) {
       throw new Error('missing parameter');
     }
-    const carsByModel = this.data.filter(car => car.model === searchValue);
+    const carsByModel = this.#storage.filter(car => car.model === searchValue);
     return carsByModel;
   }
 
